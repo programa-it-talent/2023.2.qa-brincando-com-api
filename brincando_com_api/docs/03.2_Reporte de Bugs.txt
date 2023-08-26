@@ -1,0 +1,18 @@
+[BUG] Usuario está conseguindo logar com senha invalida
+	Data: 25/08/2023
+	- Versão: ???
+	- Script:
+		Cenario: Login com senham invalida
+	        Dado que o usuario possua acesso ao endpoint "/api/login"
+	        Quando o usuario informar o contrato no corpo da requisicao:
+	            '{
+	                "email": "eve.holt@reqres.in",
+	                "password": "####"
+	            }'
+	        Entao a api retorna o status code '400'
+	        E a api retorna a mensagem de erro "senha invalida"
+	- Evidencia:
+		Status: 200
+		{
+		    "token": "QpwL5tke4Pnpja7X4"
+		}
